@@ -26,7 +26,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/testuser/reguser', userdt);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/testuser/reguser`, userdt);
       console.log("✅ Server Response:", res.data);
       toast.success("Registration successful!");
       navigate('/login');

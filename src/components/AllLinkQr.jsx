@@ -10,7 +10,7 @@ const AllLinkQr = () => {
     const fetchqrlinks = async() => {
          try {
             const utoken = localStorage.getItem('utoken')
-            const responce = await axios.get("http://localhost:5000/testuser/getqrlink",
+            const responce = await axios.get(`${import.meta.env.VITE_API_URL}/testuser/getqrlink`,
                 {
                     headers: {
                         "Content-Type": 'application/json',

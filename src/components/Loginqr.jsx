@@ -16,7 +16,7 @@ const SaveQr = async() => {
   const utoken = localStorage.getItem('utoken');
 
   try {
-    const responce =  await axios.post("http://localhost:5000/testuser/addlinkqr",{
+      const responce = await axios.post(`${import.meta.env.VITE_API_URL}/testuser/addlinkqr`,{
         qrlink:qrLink,
         qrcolor:qrCode
     },
@@ -41,7 +41,7 @@ const SendQr = async() => {
   }
   try {
     const imageBase64 = canvas.toDataURL('image/png');
-   const responce = await fetch('http://localhost:5000/testuser/sendemail', {
+   const responce = await fetch(`${import.meta.env.VITE_API_URL}/testuser/sendemail`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
