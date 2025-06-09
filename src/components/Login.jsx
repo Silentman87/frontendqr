@@ -38,7 +38,7 @@ const Login = () => {
     setLoading(true);
     try {
       
-      const logindt = await axios.post(`${process.env.REACT_APP_API_URL}/testuser/loguser`, userdt);
+      const logindt = await axios.post(`${import.meta.env.VITE_API_URL}/testuser/loguser`, userdt);
       if (logindt.data.loginsts === "0") {
         localStorage.setItem("utoken", logindt.data.token);
         toast.success("Login successful!");
