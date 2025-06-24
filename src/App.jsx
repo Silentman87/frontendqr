@@ -13,6 +13,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { HelmetProvider } from 'react-helmet-async';
 import Loginqr from './components/Loginqr';
 import AllLinkQr from './components/AllLinkQr';
+import ShowQR from './components/ShowQR'; // Adjust the path as needed
+
+
 
 const App = () => {
   return (
@@ -27,7 +30,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/loginqr" element={<Loginqr />} />
-            
+            <Route path="/visitqr" element={<ShowQR />} />
 
            <Route element={<ProtectedRoute />}>
            

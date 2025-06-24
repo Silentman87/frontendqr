@@ -5,6 +5,9 @@ import axios  from 'axios';
 
 import {QRCodeCanvas} from 'qrcode.react';
 
+
+
+
 const Loginqr = () => {
   const [qrLink, setQrLink] = useState('');
   const [qrCode, setQrCode] = useState('#000000');
