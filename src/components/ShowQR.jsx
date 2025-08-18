@@ -19,6 +19,12 @@ const ShowQR = () => {
     };
 
     fetchQRs();
+     // 🔄 Keep fetching every 5 seconds
+  const interval = setInterval(fetchQRs, 5000);
+
+  // cleanup when component unmounts
+  return () => clearInterval(interval);
+  
   }, []);
 
   return (
