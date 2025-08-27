@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [recentActivity, setRecentActivity] = useState([]);
@@ -47,16 +48,27 @@ const Dashboard = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
             Powerful, real-time QR Code platform with modern UI, analytics, and lightning-fast generation.
           </p>
-          <a
-            href="/loginqr"
-            className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-800 to-gray-600 text-white text-lg px-8 py-4 rounded-full font-bold shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1"
-          >
-            <span className="group-hover:animate-spin">🚀</span>
-            Generate QR Now
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+         
+<Link
+  to="/loginqr"
+  className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-800 to-gray-600 text-white text-lg px-8 py-4 rounded-full font-bold shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1"
+>
+  <span className="group-hover:animate-spin">🚀</span>
+  Generate QR Now
+  <svg
+    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 8l4 4m0 0l-4 4m4-4H3"
+    />
+  </svg>
+</Link>
         </div>
       </section>
 
